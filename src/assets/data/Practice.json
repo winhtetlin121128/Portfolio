@@ -1,0 +1,34 @@
+[
+    {
+        "title" : "The Coffee Club",
+        "type" : "Landing-Site",
+        "project" : "Fullstack Project",
+        "description" : "The Coffee Club is a full-stack digital landing-site, with events handling, locations, auth system and news day-to-day.",
+        "tech" : ["React", "TailwindCss", "Node.js", "Mongo", "Framer-Motion"],
+        "size" : "S",
+        "cover" : "/projects/thecoffeeclub.png",
+        "category" : "Realworld"
+    },
+
+    {
+        "title" : "CMS",
+        "type" : "Community Management",
+        "project" : "Fullstack Project",
+        "description": "CMS is a full-stack digital management system such as manage events, forms, seats, students and cards. In other features, with admin dashboard, auth system and role-base acess.",
+        "tech" : ["React", "TailwindCss", "Node.js", "Express", "Postgresql", "Mongo", "MiniO"],
+        "size" : "M",
+        "cover" : "/projects/CMS.png",
+        "category" : "Realworld"
+    },
+
+    {
+        "title" : "Portfilio",
+        "type" : "Profile",
+        "project" : "Frontend",
+        "description" : "Portfilio is a frontend website, created for communicate with perople who want to work with me. built with frontend tech.",
+        "tech" : ["React", "TailwindCss", "Framer-Motion"],
+        "size" : "S",
+        "cover" : "/projects/Portfilio.png",
+        "category" : "Realworld"
+    }
+]

@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: "Recursive";
+  src: url("./assets/font/Recursive.ttf");
+}
+
+@font-face {
+  font-family: "Faleko";
+  src: url("./assets/font/Faleko.ttf");
+}
+
+@font-face {
+  font-family: "Witchcraft";
+  src: url("./assets/font/Witchcraft.otf");
+}
+
+@font-face {
+  font-family: "Valley";
+  src: url("./assets/font/Valley.ttf");
+}
+
+@font-face {
+  font-family: "Pixel";
+  src: url("./assets/font/PixelPurl.ttf");
+}
+
+@keyframes activeDropdown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dropdown-menu {
+  animation: activeDropdown ease-in-out 0.30s;
+}
