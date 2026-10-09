@@ -10,7 +10,8 @@ import { useRef, useState, useEffect } from 'react';
 import MiPhoto from './assets/mi.png';
 
 // Components 
-import ProjectShowCase from './components/project';
+import ProjectShowCase from './components/project.jsx';
+import AboutContaienr from './components/about.jsx'
 
 const App = () => {
 
@@ -114,7 +115,7 @@ const App = () => {
               </div>
             </section>
 
-            <div className='grayscale hover:grayscale-0 w-100 h-[70vh] overflow-hidden flex items-end'>
+            <div className='grayscale hover:grayscale-0 w-100 h-[70vh] flex items-end'>
               <img src={MiPhoto} className='grayscale w-full hover:grayscale-0 transition duration-200 select-none'/>
             </div>
 
@@ -137,6 +138,7 @@ const App = () => {
         </div>
 
         <ProjectShowCase />
+        <AboutContaienr />
 
       </main>
 
