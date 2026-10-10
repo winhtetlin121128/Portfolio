@@ -11,7 +11,7 @@ import MiPhoto from './assets/mi.png';
 
 // Components 
 import ProjectShowCase from './components/project.jsx';
-import AboutContaienr from './components/about.jsx'
+import AboutContaienr from './components/about.jsx';
 
 const App = () => {
 
@@ -61,11 +61,11 @@ const App = () => {
   return (
     <div className="flex flex-col w-full items-center bg-[#eeeee5]">
 
-      <nav ref={navRef} className="h-20 w-full backdrop-blur-lg flex items-center justify-center sticky z-50 top-0">
+      <nav ref={navRef} className="h-20 w-full flex items-center justify-center sticky z-50 top-0">
         <div className='w-320 flex justify-between items-center pl-3 pr-5 font-[Recursive]'>
           <h3 className="w-[max-content] pl-2 pr-2 h-full flex justify-center items-center text-blue-600 text-[15px]">{Logo}</h3>
 
-          <ul className="flex gap-1 justify-center items-center h-12 rounded-[30px] pl-2 pr-2 bg-[#e3e2dc]">
+          <ul className="flex gap-1 justify-center items-center h-12 rounded-[30px] pl-2 pr-2 bg-[#e3e2dc] backdrop-blur-xl">
             {
               NavElement.map((element, index) => {
                 return (

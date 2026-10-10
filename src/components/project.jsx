@@ -17,7 +17,7 @@ const ProjectShowCase = () => {
 
     return (
         <div className="h-[100vh] w-full flex justify-center pt-20">
-            <div className="w-320">
+            <div className="w-320 pb-30 border-b border-[#000]/20">
                 <header className="h-30 flex justify-between list-none gap-2 items-center pl-3">
                     <div className="flex flex-col gap-1">
                         <h3 className="font-[Valley] text-[13px]">SELECTED PROJECTS</h3>
