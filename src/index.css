@@ -25,6 +25,11 @@
   src: url("./assets/font/PixelPurl.ttf");
 }
 
+@font-face {
+  font-family: "Vegan";
+  src: url("./assets/font/Vegan.ttf");
+}
+
 @keyframes activeDropdown {
   from {
     transform: translateY(-10px);
