@@ -1,4 +1,6 @@
 
+import { motion } from 'motion/react';
+
 const Items = [
     {
         "title" : "TOTAL PROJECTS",
@@ -17,11 +19,11 @@ const Items = [
 ]
 
 const TechStack = ["React", "TailwindCss", "HTML5", "CSS3", "JavaScript", "Nodejs", "Express", "Postgresql", "Mongo"];
-const ToolsFlow = ["VsCode", "Figma", "Git", "GitHub", "Postman"]
+const ToolFlow = ["VsCode", "Figma", "Git", "GitHub", "Postman"];
 
 import MiPhoto from '../assets/miphoto.jpg';
 import TechIcon from '../techstack.js';
-const { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo } =  TechIcon;
+const { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo, VsCode, Figma, Git, GitHub, Postman } =  TechIcon;
 
 const About = () => {
     return (
@@ -54,55 +56,77 @@ const About = () => {
                         </ul>
                         
                         <div className='flex flex-col mt-10 gap-5'>
-                            <p className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
+                            <motion.p 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1}}
+                            className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
                                 I focus on how can be easy to use and how much useful for realworld problem.
                                 I enjoy turning ideas into real products and crafting experience that feel smooth and intutive.
-                            </p>
-                            <p className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
+                            </motion.p>
+                            <motion.p 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1}}
+                            className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
                                 In other side, I also learning new thing little by little, day to day, step by step from online,
                                 self-taught and sloving problem in daily world.
-                            </p>
-                            <p className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
+                            </motion.p>
+                            <motion.p 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1}}
+                            className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
                                 I mainly build landing-site, E-commerce and Management System with MERN Stack.
-                            </p>
-                            <p className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
+                            </motion.p>
+                            <motion.p 
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1}}
+                            className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
                                 My goal is to become a passionate Full-stack Developer.
-                            </p>
+                            </motion.p>
                         </div>
 
                         <div className='flex flex-col mt-10 font-[Valley] text-[15px]'>
                             <div>
                                 <h3>Tech Stack I Use</h3>
 
-                                <ul className='flex flex-wrap gap-2 mt-3'>
+                                <motion.ul 
+                                initial={{ opacity: 0, x: -100}}
+                                whileInView={{ opacity: 1, x: 0  }}
+                                className='flex flex-wrap gap-2 mt-3'>
                                     {
                                         TechStack.map((tech, index) => {
                                             return (
                                                 <li key={index} className='flex gap-2 justify-center items-center pl-3 pr-3 pt-1 pb-1 bg-[#fff] rounded-3xl border border-[#000]/20 cursor-default hover:shadow-lg transition duration-200'>
                                                     <img src={TechIcon[tech]} className='w-4'/>
-                                                    <span className='text-[14px]'>{tech}</span>
+                                                    <span className='text-[14px]'>{tech === "Nodejs" ? "Node.js" : tech}</span>
                                                 </li>
                                             )
                                         })
                                     }
-                                </ul>
+                                </motion.ul>
                             </div>
 
                             <div className='mt-10'>
                                 <h3 className=''>Tools I Use</h3>
 
-                                <ul className='flex flex-wrap gap-2 mt-3'>
+                                <motion.ul
+                                initial={{ opacity: 0, x: -100}}
+                                whileInView={{ opacity: 1, x: 0  }}
+                                className='flex flex-wrap gap-2 mt-3'>
                                     {
-                                        TechStack.map((tech, index) => {
+                                        ToolFlow.map((tool, index) => {
                                             return (
                                                 <li key={index} className='flex gap-2 justify-center items-center pl-3 pr-3 pt-1 pb-1 bg-[#fff] rounded-3xl border border-[#000]/20 cursor-default hover:shadow-lg transition duration-200'>
-                                                    <img src={TechIcon[tech]} className='w-4'/>
-                                                    <span className='text-[14px]'>{tech}</span>
+                                                    <img src={TechIcon[tool]} className='w-4'/>
+                                                    <span className='text-[14px]'>{tool === "VsCode" ? "VS Code" : tool}</span>
                                                 </li>
                                             )
                                         })
                                     }
-                                </ul>
+                                </motion.ul>
                             </div>
                         </div>
                     </section>

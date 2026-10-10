@@ -7,17 +7,44 @@ import Linkedin from './assets/linkedin.png';
 import Telegram from './assets/tele.png';
 import Whatsapp from './assets/whatsapp.png';
 import { useRef, useState, useEffect } from 'react';
+import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 import MiPhoto from './assets/mi.png';
 
 // Components 
 import ProjectShowCase from './components/project.jsx';
 import AboutContaienr from './components/about.jsx';
+import ContactContainer from './components/contact.jsx';
+import FooterContainer from './components/Footer.jsx';
+
+//animate 
+const container = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildern: 1 } }
+}
+
+const items = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y:0 }
+}
 
 const App = () => {
 
   const [open, setOpen] = useState(false);
   const [activeElement, setActiveElement] = useState("Home");
   const navRef = useRef(null);
+
+  const [hidden, setHidden] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+
+    if (latest < 80) {
+      setHidden(false);
+    } else if (previous !== undefined) {
+      setHidden(latest > previous);
+    }
+  });
 
   const handleToggle = (element) => {
     if(element === "Home"){
@@ -59,13 +86,22 @@ const App = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full items-center bg-[#eeeee5]">
+    <div className="flex flex-col w-full items-center">
 
-      <nav ref={navRef} className="h-20 w-full flex items-center justify-center sticky z-50 top-0 border-b border-[#000]/20 backdrop-blur-xl">
+      <motion.nav 
+      animate={{
+        y: hidden ? "-120%" : "0%",
+        opacity: hidden ? 0 : 1,
+      }}
+      transition={{
+        duration: 0.3,
+        ease: "easeInOut",
+      }}
+      ref={navRef} className="h-20 w-full flex items-center justify-center sticky z-50 top-0">
         <div className='w-320 flex justify-between items-center pl-3 pr-5 font-[Recursive]'>
           <h3 className="w-[max-content] pl-2 pr-2 h-full flex justify-center items-center text-blue-600 text-[15px]">{Logo}</h3>
 
-          <ul className="flex gap-1 justify-center items-center h-12 rounded-[30px] pl-2 pr-2 bg-[#e3e2dc] backdrop-blur-xl">
+          <ul className="flex gap-1 justify-center items-center h-12 rounded-[30px] pl-2 pr-2 bg-[#e3e2dc]/60 backdrop-blur-xl">
             {
               NavElement.map((element, index) => {
                 return (
@@ -93,7 +129,7 @@ const App = () => {
             </div> 
           )
         }
-      </nav>
+      </motion.nav>
 
       <main className="w-full flex flex-col items-center h-[100%]">
         
@@ -139,6 +175,8 @@ const App = () => {
 
         <ProjectShowCase />
         <AboutContaienr />
+        <ContactContainer />
+        <FooterContainer />
 
       </main>
 

@@ -9,5 +9,10 @@ import { default as Nodejs } from './assets/icon/Node.js.png';
 import { default as Express } from './assets/icon/Express.png';
 import { default as Postgresql } from './assets/icon/Postgresql.png';
 import { default as Mongo } from './assets/icon/Mongo.png';
+import { default as VsCode } from './assets/icon/VsCode.png';
+import { default as Figma } from './assets/icon/Figma.png';
+import { default as Git } from './assets/icon/Git.png';
+import { default as GitHub } from './assets/icon/GitHub.png';
+import { default as Postman } from './assets/icon/Postman.png';
 
-export default { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo}
+export default { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo, VsCode, Figma, Git, GitHub, Postman};

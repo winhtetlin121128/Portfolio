@@ -5,6 +5,17 @@ const ProjectsMenu = ["Landing", ""]
 
 import Practice from '../assets/data/Practice.json';
 
+//animate 
+const container = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildern: 1 } }
+}
+
+const items = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y:0 }
+}
+
 const ProjectShowCase = () => {
 
     const [activeTag, setActiveTag] = useState(false);
@@ -66,26 +77,78 @@ const ProjectShowCase = () => {
                     }
 
                     {
-                        activeValue === "Web" ? 
-                        
-                        <div>
-                            <h3>Web</h3>
-                        </div> : ""
+                        activeValue === "Web" && (
+                            <div className="flex flex-wrap gap-3 w-full">
+                                {Practice
+                                .filter((element) => element.tag === "Web")
+                                .map((element, index) => (
+                                    <li key={index} className="w-80 h-85 rounded-3xl border border-[#000]/20 overflow-hidden hover:scale-[1.05] hover:shadow-lg shadow-[#fff] transition duration-200">
+                                        <div className="h-50 border-b border-[#000]/20 overflow-hidden">
+                                            <img src={element.cover} alt={element.title} className="w-full h-full select-none"/>
+                                        </div>
 
+                                        <div className="h-35 bg-[#fff] pl-5 pr-3 pt-1">
+                                            <h3 className="font-[Pixel] text-[23px]">{element.title}</h3>
+                                            <p className="font-[Valley] text-[#000]/60 text-[13px] line-clamp-2 mt-1">{element.description}</p>
+
+                                            <div className="flex justify-between pr-2 mt-5">
+                                                <span className="font-[Valley] text-[12px] text-blue-600 cursor-pointer hover:opacity-[0.8] transition duration-200">Souce Code</span>
+                                                <button className="font-[Valley] text-[12px] border border-[#000]/20 pl-2 pr-2 rounded-[5px] hover:bg-[#000] hover:text-[#fff] transition duration-200">Detail</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))}
+                            </div>
+                    )}
+
+                    {
+                        activeValue === "Mobile" &&
+                            <div className="flex flex-wrap gap-3 w-full">
+                                {Practice
+                                .filter((element) => element.tag === "Mobile")
+                                .map((element, index) => (
+                                    <li key={index} className="w-80 h-85 rounded-3xl border border-[#000]/20 overflow-hidden hover:scale-[1.05] hover:shadow-lg shadow-[#fff] transition duration-200">
+                                        <div className="h-50 border-b border-[#000]/20 overflow-hidden">
+                                            <img src={element.cover} alt={element.title} className="w-full h-full select-none"/>
+                                        </div>
+
+                                        <div className="h-35 bg-[#fff] pl-5 pr-3 pt-1">
+                                            <h3 className="font-[Pixel] text-[23px]">{element.title}</h3>
+                                            <p className="font-[Valley] text-[#000]/60 text-[13px] line-clamp-2 mt-1">{element.description}</p>
+
+                                            <div className="flex justify-between pr-2 mt-5">
+                                                <span className="font-[Valley] text-[12px] text-blue-600 cursor-pointer hover:opacity-[0.8] transition duration-200">Souce Code</span>
+                                                <button className="font-[Valley] text-[12px] border border-[#000]/20 pl-2 pr-2 rounded-[5px] hover:bg-[#000] hover:text-[#fff] transition duration-200">Detail</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))}
+                            </div>
                     }
 
                     {
-                        activeValue === "Mobile" ?
-                        <div>
-                            <h3>Mobile</h3>
-                        </div> :""
-                    }
+                        activeValue === "Design" &&
+                            <div className="flex flex-wrap gap-3 w-full">
+                                {Practice
+                                .filter((element) => element.tag === "Design")
+                                .map((element, index) => (
+                                    <li key={index} className="w-80 h-85 rounded-3xl border border-[#000]/20 overflow-hidden hover:scale-[1.05] hover:shadow-lg shadow-[#fff] transition duration-200">
+                                        <div className="h-50 border-b border-[#000]/20 overflow-hidden">
+                                            <img src={element.cover} alt={element.title} className="w-full h-full select-none"/>
+                                        </div>
 
-                    {
-                        activeValue === "Design" ?
-                        <div>
-                            <h3>Design</h3>
-                        </div> : ""
+                                        <div className="h-35 bg-[#fff] pl-5 pr-3 pt-1">
+                                            <h3 className="font-[Pixel] text-[23px]">{element.title}</h3>
+                                            <p className="font-[Valley] text-[#000]/60 text-[13px] line-clamp-2 mt-1">{element.description}</p>
+
+                                            <div className="flex justify-between pr-2 mt-5">
+                                                <span className="font-[Valley] text-[12px] text-blue-600 cursor-pointer hover:opacity-[0.8] transition duration-200">Souce Code</span>
+                                                <button className="font-[Valley] text-[12px] border border-[#000]/20 pl-2 pr-2 rounded-[5px] hover:bg-[#000] hover:text-[#fff] transition duration-200">Detail</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                ))}
+                            </div>
                     }
                 </ul>
             </div>

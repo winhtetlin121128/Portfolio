@@ -7,7 +7,8 @@
         "tech" : ["React", "TailwindCss", "Node.js", "Mongo", "Framer-Motion"],
         "size" : "S",
         "cover" : "/projects/thecoffeeclub.png",
-        "category" : "Realworld"
+        "category" : "Realworld",
+        "tag" : "Web"
     },
 
     {
@@ -18,7 +19,8 @@
         "tech" : ["React", "TailwindCss", "Node.js", "Express", "Postgresql", "Mongo", "MiniO"],
         "size" : "M",
         "cover" : "/projects/CMS.png",
-        "category" : "Realworld"
+        "category" : "Realworld",
+        "tag" : "Web"
     },
 
     {
@@ -29,6 +31,7 @@
         "tech" : ["React", "TailwindCss", "Framer-Motion"],
         "size" : "S",
         "cover" : "/projects/Portfilio.png",
-        "category" : "Realworld"
+        "category" : "Realworld",
+        "tag" : "Web"
     }
 ]
