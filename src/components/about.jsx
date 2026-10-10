@@ -16,10 +16,12 @@ const Items = [
     }
 ]
 
-const TechStack = ["React", "TailwindCss", "HTML5", "CSS3", "JavaScript", "Node.js", "Express", "Axios", "Postgresql", "Mongo"]
+const TechStack = ["React", "TailwindCss", "HTML5", "CSS3", "JavaScript", "Nodejs", "Express", "Postgresql", "Mongo"];
+const ToolsFlow = ["VsCode", "Figma", "Git", "GitHub", "Postman"]
 
 import MiPhoto from '../assets/miphoto.jpg';
-import React from '../assets/icon/React.png';
+import TechIcon from '../techstack.js';
+const { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo } =  TechIcon;
 
 const About = () => {
     return (
@@ -44,7 +46,7 @@ const About = () => {
                                     return (
                                         <li key={index} className='text-[#000]/60'>
                                             <h3 className="font-[Valley] text-[13px]">{element.title}</h3>
-                                            <span className="font-[Recursive] text-[14px]">{element.count}</span>
+                                            <span className="font-[Recursive] text-[14px] ml-2">{element.count}</span>
                                         </li>
                                     )
                                 })
@@ -69,17 +71,39 @@ const About = () => {
                         </div>
 
                         <div className='flex flex-col mt-10 font-[Valley] text-[15px]'>
-                            <h3>Tech Stack I Use</h3>
+                            <div>
+                                <h3>Tech Stack I Use</h3>
 
-                            <ul className='flex flex-wrap gap-2 mt-3'>
-                                {
-                                    TechStack.map((tech, index) => {
-                                        return (
-                                            <span key={index} className='text-[13px] pl-3 pr-3 pt-1 pb-1 bg-[#fff] rounded-3xl border border-[#000]/20 cursor-default hover:shadow-lg transition duration-200'>{tech}</span>
-                                        )
-                                    })
-                                }
-                            </ul>
+                                <ul className='flex flex-wrap gap-2 mt-3'>
+                                    {
+                                        TechStack.map((tech, index) => {
+                                            return (
+                                                <li key={index} className='flex gap-2 justify-center items-center pl-3 pr-3 pt-1 pb-1 bg-[#fff] rounded-3xl border border-[#000]/20 cursor-default hover:shadow-lg transition duration-200'>
+                                                    <img src={TechIcon[tech]} className='w-4'/>
+                                                    <span className='text-[14px]'>{tech}</span>
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            </div>
+
+                            <div className='mt-10'>
+                                <h3 className=''>Tools I Use</h3>
+
+                                <ul className='flex flex-wrap gap-2 mt-3'>
+                                    {
+                                        TechStack.map((tech, index) => {
+                                            return (
+                                                <li key={index} className='flex gap-2 justify-center items-center pl-3 pr-3 pt-1 pb-1 bg-[#fff] rounded-3xl border border-[#000]/20 cursor-default hover:shadow-lg transition duration-200'>
+                                                    <img src={TechIcon[tech]} className='w-4'/>
+                                                    <span className='text-[14px]'>{tech}</span>
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            </div>
                         </div>
                     </section>
                 </div>

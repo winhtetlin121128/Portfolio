@@ -61,7 +61,7 @@ const App = () => {
   return (
     <div className="flex flex-col w-full items-center bg-[#eeeee5]">
 
-      <nav ref={navRef} className="h-20 w-full flex items-center justify-center sticky z-50 top-0">
+      <nav ref={navRef} className="h-20 w-full flex items-center justify-center sticky z-50 top-0 border-b border-[#000]/20 backdrop-blur-xl">
         <div className='w-320 flex justify-between items-center pl-3 pr-5 font-[Recursive]'>
           <h3 className="w-[max-content] pl-2 pr-2 h-full flex justify-center items-center text-blue-600 text-[15px]">{Logo}</h3>
 
