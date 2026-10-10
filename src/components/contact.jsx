@@ -1,6 +1,7 @@
 import SocialIcon from '../techstack.js';
 const ContactLinks = ["Linkedin", "Telegram", "Whatsapp"];
 const { WhatsApp, Telegram, Whatsapp } = SocialIcon;
+import { motion } from 'motion/react';
 
 const TelegramLink = import.meta.env.VITE_TELEGRAM_URL;
 const WhatsAppLink = import.meta.env.VITE_WHATSAPP_URL;
@@ -24,8 +25,12 @@ const Contact = () => {
     }
 
     return (
-        <div className="h-[100%] pb-10  flex justify-center pt-20">
-            <div className="w-320">
+        <div className="h-[100%] items-center pb-20  flex justify-center pt-30">
+            <motion.div 
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.30, delay: 0.5}}
+            className="w-320">
                 <header className="flex flex-col justify-center items-center">
                     <h3 className="text-[13px] font-[Valley]">GET IN TOUCH</h3>
                     <h1 className="font-[ka1] font-bold text-[30px]"><span className='text-orange-600'>Let</span><span className="text-blue-600"> Work</span> Together</h1>
@@ -50,7 +55,7 @@ const Contact = () => {
                     <span>yaungaung376@gmail.com</span>
                     <span>+959757726914</span>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

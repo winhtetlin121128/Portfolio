@@ -44,7 +44,9 @@ const App = () => {
   const [hidden, setHidden] = useState(false);
   const { scrollY } = useScroll();
 
+  const ProjectRef = useRef(null);
   const AboutRef = useRef(null);
+
 
   // Scroll to Section
   const ScrolltoSection = (ref) => {
@@ -95,6 +97,10 @@ const App = () => {
 
     if (element === "About") {
       ScrolltoSection(AboutRef);
+    }
+
+    if (element === "Projects") {
+      ScrolltoSection(ProjectRef)
     }
   };
 
@@ -147,7 +153,7 @@ const App = () => {
         duration: 0.3,
         ease: "easeInOut",
       }}
-      ref={navRef} className="h-20 w-full flex items-center justify-center sticky z-50 top-0">
+      ref={navRef} className="h-20 w-full flex items-center justify-center sticky z-50 top-0 border-b border-[#000]/20 backdrop-blur-lg">
         <div className='w-320 flex justify-between items-center pl-3 pr-5 font-[Recursive]'>
           <h3 className="w-[max-content] pl-2 pr-2 h-full flex justify-center items-center text-blue-600 text-[15px]">{Logo}</h3>
 
@@ -170,7 +176,7 @@ const App = () => {
 
         {
           open && (
-            <div className='dropdown-menu w-100 h-40 absolute bg-[#e3e2dc] z-50 top-17 rounded-[30px] flex justify-center items-center transition duration-200'>
+            <div className='dropdown-menu w-100 h-40 absolute bg-[#e3e2dc] z-50 top-20 rounded-[30px] flex justify-center items-center transition duration-200'>
               {
                 activeElement === "Projects" ? <div>
 
@@ -237,7 +243,10 @@ const App = () => {
 
         </div>
 
-        <ProjectShowCase />
+        <ProjectShowCase 
+          ScrolltoSection= {ScrolltoSection}
+          ProjectRef= {ProjectRef}
+        />
         <AboutContaienr 
           ScrolltoSection= {ScrolltoSection}
           AboutRef= {AboutRef}

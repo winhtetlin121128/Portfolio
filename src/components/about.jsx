@@ -30,7 +30,7 @@ const { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql
 const About = ({ AboutRef }) => {
     return (
         <div ref={AboutRef} className="h-[100%] pt-20">
-            <div className="w-320 border-b pb-20 border-[#000]/20">
+            <div className="w-320 border-b border-[#000]/20 pb-20">
                 <div>
                     <h3 className="font-[Valley] text-[13px]">ABOUT ME</h3>
                     <div className='font-[Recursive] text-[30px] font-bold'>
