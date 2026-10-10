@@ -1,9 +1,11 @@
 import { useState } from "react"
+import { motion } from 'motion/react'
 
 const MenuTags = ["All", "Web", "Mobile", "Design"];
 const ProjectsMenu = ["Landing", ""]
 
 import Practice from '../assets/data/Practice.json';
+import { caption } from "motion/react-client";
 
 //animate 
 const container = {
@@ -28,7 +30,12 @@ const ProjectShowCase = () => {
 
     return (
         <div className="h-[100vh] w-full flex justify-center pt-20">
-            <div className="w-320 pb-30 border-b border-[#000]/20">
+            <motion.div 
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}
+            transition={{ duration: 0.30, delay: 0.30}}
+            viewport={{ once: true, amount: 0.15}}
+            className="w-320 pb-30 border-b border-[#000]/20">
                 <header className="h-30 flex justify-between list-none gap-2 items-center pl-3">
                     <div className="flex flex-col gap-1">
                         <h3 className="font-[Valley] text-[13px]">SELECTED PROJECTS</h3>
@@ -51,11 +58,17 @@ const ProjectShowCase = () => {
 
                     {
                         activeValue === "All" || activeValue === "" ?
-                        <div className="flex flex-wrap gap-3 w-full">
+                        <motion.div 
+                        variants={container}
+                        initial="hidden"
+                        whileInView="visible"
+                        className="flex flex-wrap gap-3 w-full">
                             {
                                 Practice.map((element, index) => {
                                     return (
-                                        <li key={index} className="w-80 h-85 rounded-3xl border border-[#000]/20 overflow-hidden hover:scale-[1.05] hover:shadow-lg shadow-[#fff] transition duration-200">
+                                        <motion.li
+                                        variants={items}
+                                        key={index} className="w-80 h-85 rounded-3xl border border-[#000]/20 overflow-hidden hover:scale-[1.05] hover:shadow-lg shadow-[#fff] transition duration-200">
                                             <div className="h-50 border-b border-[#000]/20 overflow-hidden">
                                                 <img src={element.cover} alt={element.title} className="w-full h-full select-none"/>
                                             </div>
@@ -69,11 +82,11 @@ const ProjectShowCase = () => {
                                                     <button className="font-[Valley] text-[12px] border border-[#000]/20 pl-2 pr-2 rounded-[5px] hover:bg-[#000] hover:text-[#fff] transition duration-200">Detail</button>
                                                 </div>
                                             </div>
-                                        </li>
+                                        </motion.li>
                                     )
                                 })
                             }
-                        </div> : ""
+                        </motion.div> : ""
                     }
 
                     {
@@ -151,7 +164,7 @@ const ProjectShowCase = () => {
                             </div>
                     }
                 </ul>
-            </div>
+            </motion.div>
         </div>
     )
 }

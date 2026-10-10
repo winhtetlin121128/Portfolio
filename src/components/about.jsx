@@ -1,5 +1,7 @@
 
 import { motion } from 'motion/react';
+import Typewriter from 'typewriter-effect'
+
 
 const Items = [
     {
@@ -18,20 +20,31 @@ const Items = [
     }
 ]
 
-const TechStack = ["React", "TailwindCss", "HTML5", "CSS3", "JavaScript", "Nodejs", "Express", "Postgresql", "Mongo"];
+const TechStack = ["React", "TailwindCss", "HTML5", "CSS3", "JavaScript", "Nodejs", "Express", "Postgresql", "Mongo", "Motion"];
 const ToolFlow = ["VsCode", "Figma", "Git", "GitHub", "Postman"];
 
 import MiPhoto from '../assets/miphoto.jpg';
 import TechIcon from '../techstack.js';
-const { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo, VsCode, Figma, Git, GitHub, Postman } =  TechIcon;
+const { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo, Motion, VsCode, Figma, Git, GitHub, Postman } =  TechIcon;
 
-const About = () => {
+const About = ({ AboutRef }) => {
     return (
-        <div className="h-[100%] pt-20">
+        <div ref={AboutRef} className="h-[100%] pt-20">
             <div className="w-320 border-b pb-20 border-[#000]/20">
                 <div>
                     <h3 className="font-[Valley] text-[13px]">ABOUT ME</h3>
-                    <h1 className="font-[Recursive] text-[30px] font-bold">Frontend Developer</h1>
+                    <div className='font-[Recursive] text-[30px] font-bold'>
+                        <Typewriter 
+                        options={{ 
+                            strings: ["Frontend Focus : Full-stack Engineer", "IT Support Specialist", "UI/UX Designer", "Just A Student"], 
+                            autoStart: true,
+                            loop: true,
+                            cursor: '|',
+                            delay: 20,
+                            deleteSpeed: 3
+                        }}
+                        />
+                    </div>
                 </div>
                 <div className="flex mt-20 pl-40 pr-40">
                     <section className="flex flex-col w-[20%]">
@@ -58,8 +71,8 @@ const About = () => {
                         <div className='flex flex-col mt-10 gap-5'>
                             <motion.p 
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 1}}
+                            whileInView={{ opacity: 1}}
+                            transition={{ duration: 0.10}}
                             className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
                                 I focus on how can be easy to use and how much useful for realworld problem.
                                 I enjoy turning ideas into real products and crafting experience that feel smooth and intutive.
@@ -67,7 +80,7 @@ const About = () => {
                             <motion.p 
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            transition={{ duration: 1}}
+                            transition={{ duration: 0.40}}
                             className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
                                 In other side, I also learning new thing little by little, day to day, step by step from online,
                                 self-taught and sloving problem in daily world.
@@ -77,14 +90,14 @@ const About = () => {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 1}}
                             className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
-                                I mainly build landing-site, E-commerce and Management System with MERN Stack.
+                                I mainly build landing-site, E-commerce and Management System with MERN and PERN Stack.
                             </motion.p>
                             <motion.p 
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 1}}
                             className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
-                                My goal is to become a passionate Full-stack Developer.
+                                My goal is to become a passionate Full-stack developer.
                             </motion.p>
                         </div>
 

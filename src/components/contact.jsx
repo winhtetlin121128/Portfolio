@@ -1,8 +1,28 @@
-import Linkedin from '../assets/linkedin.png';
-import Telegram from '../assets/tele.png';
-import Whatsapp from '../assets/whatsapp.png';
+import SocialIcon from '../techstack.js';
+const ContactLinks = ["Linkedin", "Telegram", "Whatsapp"];
+const { WhatsApp, Telegram, Whatsapp } = SocialIcon;
+
+const TelegramLink = import.meta.env.VITE_TELEGRAM_URL;
+const WhatsAppLink = import.meta.env.VITE_WHATSAPP_URL;
+const LinkedinLink = import.meta.env.VITE_LINKEDIN_URL;
 
 const Contact = () => {
+
+     // Handle Contact Links
+    const handleContact = (element) => {
+        if(element === "Telegram") {
+            window.open(TelegramLink)
+        }
+
+        if(element === "Whatsapp") {
+            window.open(WhatsAppLink)
+        }
+
+        if(element === "Linkedin") {
+            window.open(LinkedinLink)
+        }
+    }
+
     return (
         <div className="h-[100%] pb-10  flex justify-center pt-20">
             <div className="w-320">
@@ -14,18 +34,16 @@ const Contact = () => {
                 </header>
 
                 <ul className='flex justify-center items-center gap-3 mt-2'>
-                    <li className='flex opacity-[0.8] justify-start pl-3 items-center gap-3 w-35 h-10 rounded-xl cursor-default hover:scale-[1.05] hover:shadow-white transition duration-200 bg-[#fff]'>
-                        <img src={Linkedin} className='w-4 h-4'/>
-                        <span>Linkedin</span>
-                    </li>
-                    <li className='flex opacity-[0.8] justify-start items-center gap-3 w-35 h-10 rounded-xl pl-3 cursor-default hover:scale-[1.05] hover:shadow-white transition duration-200 bg-[#fff]'>
-                        <img src={Telegram} className='w-4 h-4'/>
-                        <span>Telegram</span>
-                    </li>
-                    <li className='flex opacity-[0.8] justify-start items-center gap-3 w-35 h-10 rounded-xl pl-3 cursor-default hover:scale-[1.05] hover:shadow-white transition duration-200 bg-[#fff]'>
-                        <img src={Whatsapp} className='w-4 h-4'/>
-                        <span>WhatsApp</span>
-                    </li>
+                    {
+                        ContactLinks.map((element, index) => {
+                            return (
+                                <li key={index} onClick={() => handleContact(element)} className='flex justify-start pl-3 items-center gap-3 w-35 h-10 rounded-xl cursor-default hover:scale-[1.05] hover:text-blue-600 transition duration-200'>
+                                <img src={SocialIcon[element]} className='w-4'/>
+                                <span>{element}</span>
+                                </li>
+                            )
+                        })
+                    }
                 </ul>
 
                 <div className='w-full flex flex-col mt-10 items-center justify-center font-[Recursive] text-[#000]/60 text-[13px]'>

@@ -9,10 +9,14 @@ import { default as Nodejs } from './assets/icon/Node.js.png';
 import { default as Express } from './assets/icon/Express.png';
 import { default as Postgresql } from './assets/icon/Postgresql.png';
 import { default as Mongo } from './assets/icon/Mongo.png';
+import { default as Motion} from './assets/icon/Motion.png';
 import { default as VsCode } from './assets/icon/VsCode.png';
 import { default as Figma } from './assets/icon/Figma.png';
 import { default as Git } from './assets/icon/Git.png';
 import { default as GitHub } from './assets/icon/GitHub.png';
 import { default as Postman } from './assets/icon/Postman.png';
+import { default as Linkedin } from './assets/linkedin.png';
+import { default as Telegram } from './assets/tele.png';
+import { default as Whatsapp } from './assets/whatsapp.png';
 
-export default { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo, VsCode, Figma, Git, GitHub, Postman};
+export default { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo, Motion, VsCode, Figma, Git, GitHub, Postman, Linkedin, Telegram, Whatsapp};
