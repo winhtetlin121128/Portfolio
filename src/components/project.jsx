@@ -18,7 +18,7 @@ const items = {
   visible: { opacity: 1, y:0 }
 }
 
-const ProjectShowCase = () => {
+const ProjectShowCase = ({ ProjectRef }) => {
 
     const [activeTag, setActiveTag] = useState(false);
     const [activeValue, setActiveValue] = useState("All");
@@ -29,7 +29,7 @@ const ProjectShowCase = () => {
     }
 
     return (
-        <div className="h-[100vh] w-full flex justify-center pt-20">
+        <div ref={ProjectRef} className="h-[100vh] w-full flex justify-center pt-20">
             <motion.div 
             initial={{ opacity: 0}}
             whileInView={{ opacity: 1}}
