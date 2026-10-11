@@ -182,7 +182,7 @@ const App = () => {
 
         {
           open && (
-            <div className='dropdown-menu w-100 h-40 absolute backdrop-blur-lg bg-[#e3e2dc]/80 z-50 top-20 rounded-[30px] flex justify-center items-center transition duration-200'>
+            <div className='dropdown-menu w-100 h-40 absolute backdrop-blur-lg bg-[#e3e2dc]/ z-50 top-20 rounded-[30px] flex justify-center items-center transition duration-200'>
               {
                 activeElement === "Projects" ? <div>
 
@@ -201,7 +201,7 @@ const App = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, x: 0}}
           transition={{ duration: 0.30, delay: 0.20}}
-          className='font-[Faleko] font-bold text-[#000]/60  text-[300px] relative'>Win <span className='text-blue-600'>Htet</span> Lin</motion.h3>
+          className='font-[Faleko] font-bold text-[#000]/60 -mt-50 text-[300px] relative'>Win <span className='text-blue-600'>Htet</span> Lin</motion.h3>
 
           <div className='absolute z-5 h-[100%] top-25 flex justify-center items-center'>
             <motion.section 

@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { motion } from 'motion/react'
+import { useNavigate } from 'react-router-dom';
 
 const MenuTags = ["All", "Web", "Mobile", "Design"];
 const ProjectsMenu = ["Landing", ""]
 
 import Practice from '../assets/data/Practice.json';
-import { caption } from "motion/react-client";
 
 //animate 
 const container = {
@@ -23,9 +23,10 @@ const ProjectShowCase = ({ ProjectRef }) => {
     const [activeTag, setActiveTag] = useState(false);
     const [activeValue, setActiveValue] = useState("All");
 
+
     const handleDetails = (element) => {
-        alert(element)
-    }
+        
+    };
 
     const handleCategory = (Tags) => {
         setActiveTag(true)
