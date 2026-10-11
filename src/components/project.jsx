@@ -23,6 +23,10 @@ const ProjectShowCase = ({ ProjectRef }) => {
     const [activeTag, setActiveTag] = useState(false);
     const [activeValue, setActiveValue] = useState("All");
 
+    const handleDetails = (element) => {
+        alert(element)
+    }
+
     const handleCategory = (Tags) => {
         setActiveTag(true)
         setActiveValue(Tags)
@@ -38,7 +42,7 @@ const ProjectShowCase = ({ ProjectRef }) => {
             className="w-320 pb-30 border-b border-[#000]/20">
                 <header className="h-30 flex justify-between list-none gap-2 items-center pl-3">
                     <div className="flex flex-col gap-1">
-                        <h3 className="font-[Valley] text-[13px]">SELECTED PROJECTS</h3>
+                        <h3 className="font-[SilkScreen] text-[13px]">SELECTED PROJECTS</h3>
                         <h3 className="font-[Vegan] text-[30px]">Work <span className="text-blue-600">Gallery</span></h3>
                         <p className="font-[Valley] text-[13px] text-[#000]/60 mt-1">A collection of systems, products and technical work I built.</p>
                     </div>
@@ -68,7 +72,9 @@ const ProjectShowCase = ({ ProjectRef }) => {
                                     return (
                                         <motion.li
                                         variants={items}
-                                        key={index} className="w-80 h-85 rounded-3xl border border-[#000]/20 overflow-hidden hover:scale-[1.05] hover:shadow-lg shadow-[#fff] transition duration-200">
+                                        key={index} 
+                                        onClick={() => handleDetails(element.title)}
+                                        className="w-80 h-85 rounded-3xl border border-[#000]/20 overflow-hidden hover:scale-[1.05] hover:shadow-lg shadow-[#fff] transition duration-200">
                                             <div className="h-50 border-b border-[#000]/20 overflow-hidden">
                                                 <img src={element.cover} alt={element.title} className="w-full h-full select-none"/>
                                             </div>

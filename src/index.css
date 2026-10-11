@@ -40,6 +40,11 @@
   src: url("./assets/font/ka1.ttf");
 }
 
+@font-face {
+  font-family: "SilkScreen";
+  src: url("./assets/font/SilkScreen.ttf");
+}
+
 @keyframes activeDropdown {
   from {
     transform: translateY(-10px);

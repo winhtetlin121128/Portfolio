@@ -37,7 +37,7 @@ const ProjectDetail = () => {
                                 <span className="font-[Valley] text-[12px] text-[#000]/60">TECHNOLOGIES</span>
                             </li>
                             <li className="w-[50%] shadow-lg rounded-lg pl-20 h-20 flex flex-col justify-center items-start bg-[#fff]">
-                                <span className="font-[Recursive] font-bold text-[17px]">Completed</span>
+                                <span className="font-[Recursive] font-bold text-[17px]">40%</span>
                                 <span className="font-[Valley] text-[12px] text-[#000]/60">STATUS</span>
                             </li>
                         </ul>

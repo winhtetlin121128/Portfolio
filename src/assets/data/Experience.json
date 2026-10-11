@@ -1,0 +1,41 @@
+[
+    {
+        "company" : "Local Client ( Freelance )",
+        "position" : "Frontend Developer",
+        "starttime" : "June 2026",
+        "endtime" : "Present",
+        "description" : "This's one of goal in my plan. Currently, I'm building landing-site, branding-site and management tools. I'm using the techstack depend on the features what the need. Main-target is to get experience for the next jobs."
+    },
+
+    {
+        "company" : "Western Ocean Service ( Part-Time )",
+        "position" : "Seafarer Documentation Specialist",
+        "starttime" : "June 2026",
+        "endtime" : "Oct 2026",
+        "description" : "First of all, this is a local team for berlitz marine where base on Singapore. My duty is prepare the documentation for who want to join the job aboard as seafarer. So they need the documentation such as personal information and some letter from Government."
+    },
+
+    {
+        "company" : "We Win Delivery ( Full-Time )",
+        "position" : "Junior Accountant",
+        "starttime" : "Oct 2025",
+        "endtime" : "Jan 2026",
+        "description" : "This is the learing journey about the process such as accountanting, expense and income report, handling cash flow and etc..."
+    },
+
+    {
+        "company" : "YZ NextX Solution ( Full-Time )",
+        "position" : "Service Engineer",
+        "starttime" : "May 2025",
+        "endtime" : "Sep 2025",
+        "description" : "Jumped into IT field for the first time. By the way, this's service team for Galaxy Software Ltd. I worked as a 'Service Engineer'. Mainly working on supporting teammates by tools, voucher design, software and driver installation, fixing some bugs in software and software. Sometimes I went to client sides to understand the feature what they need."
+    },
+
+    {
+        "company" : "Su Pyae Phyo Lwin ( Part-Time )",
+        "position" : "Office Staff",
+        "starttime" : "April 2024",
+        "endtime" : "April 2025",
+        "description" : "My first time job experience. A person who I know gave invitation when I attending high-school and I joined the job to understand working environment. After 1 year I joined to another job."
+    }
+]
