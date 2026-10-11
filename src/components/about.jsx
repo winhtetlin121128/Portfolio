@@ -83,7 +83,7 @@ const About = ({ AboutRef }) => {
                             transition={{ duration: 0.40}}
                             className='font-[Valley] text-[15px] text-[#000]/60 flex flex-wrap'>
                                 In other side, I also learning new thing little by little, day to day, step by step from online,
-                                self-taught and sloving problem in daily world.
+                                self-taught and sloving problem in daily life.
                             </motion.p>
                             <motion.p 
                             initial={{ opacity: 0 }}
