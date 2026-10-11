@@ -205,7 +205,7 @@ const App = () => {
             className='w-[20%] flex flex-col items-end pt-50'>
               <div className='flex flex-col justify-center items-start'>
                 <span className='font-[Valley] text-[11px] font-bold text-[#000]/80 border border-[#000]/20 pl-3 pr-3 pt-1 pb-1 rounded-3xl flex gap-1 shadow-lg'>FRONTEND-FOCUS <span>FULLSTACK ENGINEER</span>  </span>
-                <p className='font-[Recursive] text-[15px] leading-6 mt-3 ml-5 text-[#000]/60'>I built landing-site, profile & management systems with <span className='text-blue-600'>MERN</span> stack. I care
+                <p className='font-[Recursive] text-[15px] leading-6 mt-3 ml-5 text-[#000]/60'>I build landing-site, profile & management systems with <span className='text-blue-600'>MERN</span> stack. I care
                   about the product how can easy to use.
                 </p>
 
