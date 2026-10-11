@@ -20,19 +20,19 @@ const Items = [
     }
 ]
 
-const TechStack = ["React", "TailwindCss", "HTML5", "CSS3", "JavaScript", "Nodejs", "Express", "Postgresql", "Mongo", "Motion"];
-const ToolFlow = ["VsCode", "Figma", "Git", "GitHub", "Postman"];
+const TechStack = ["React", "TailwindCss", "Python", "HTML5", "CSS3", "JavaScript", "Nodejs", "Express", "Postgresql", "Mongo", "Motion"];
+const ToolFlow = ["VsCode", "Figma", "Git", "GitHub", "Postman", "Codex", "Cursor", "OpenCode"];
 
 import MiPhoto from '../assets/miphoto.jpg';
 import TechIcon from '../techstack.js';
-const { React, TailwindCss, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo, Motion, VsCode, Figma, Git, GitHub, Postman } =  TechIcon;
+const { React, TailwindCss, Python, HTML5, CSS3, JavaScript, Nodejs, Express, Postgresql, Mongo, Motion, VsCode, Figma, Git, GitHub, Postman, Codex, Cursor, OpenCode } =  TechIcon;
 
 const About = ({ AboutRef }) => {
     return (
         <div ref={AboutRef} className="h-[100%] pt-20">
             <div className="w-320 border-b border-[#000]/20 pb-20">
                 <div>
-                    <h3 className="font-[Valley] text-[13px]">ABOUT ME</h3>
+                    <h3 className="font-[SilkScreen] text-[13px]">ABOUT ME</h3>
                     <div className='font-[Recursive] text-[30px] font-bold'>
                         <Typewriter 
                         options={{ 
@@ -123,7 +123,7 @@ const About = ({ AboutRef }) => {
                             </div>
 
                             <div className='mt-10'>
-                                <h3 className=''>Tools I Use</h3>
+                                <h3 className=''>AI and Tools I Use</h3>
 
                                 <motion.ul
                                 initial={{ opacity: 0, x: -100}}

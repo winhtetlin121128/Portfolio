@@ -12,6 +12,7 @@ import MiPhoto from './assets/mi.png';
 // Components 
 import ProjectShowCase from './components/project.jsx';
 import AboutContaienr from './components/about.jsx';
+import ExperienceContainer from './components/experience.jsx';
 import ContactContainer from './components/contact.jsx';
 import FooterContainer from './components/Footer.jsx';
 import { delay } from 'motion';
@@ -46,6 +47,7 @@ const App = () => {
 
   const ProjectRef = useRef(null);
   const AboutRef = useRef(null);
+  const ExperienceRef = useRef(null);
 
 
   // Scroll to Section
@@ -101,6 +103,10 @@ const App = () => {
 
     if (element === "Projects") {
       ScrolltoSection(ProjectRef)
+    }
+
+    if (element === "Experience") {
+      ScrolltoSection(ExperienceRef)
     }
   };
 
@@ -176,7 +182,7 @@ const App = () => {
 
         {
           open && (
-            <div className='dropdown-menu w-100 h-40 absolute bg-[#e3e2dc] z-50 top-20 rounded-[30px] flex justify-center items-center transition duration-200'>
+            <div className='dropdown-menu w-100 h-40 absolute backdrop-blur-lg bg-[#e3e2dc]/ z-50 top-20 rounded-[30px] flex justify-center items-center transition duration-200'>
               {
                 activeElement === "Projects" ? <div>
 
@@ -195,7 +201,7 @@ const App = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, x: 0}}
           transition={{ duration: 0.30, delay: 0.20}}
-          className='font-[Faleko] font-bold text-[#000]/60 -mt-50 text-[300px] relative'>Win <span className='text-blue-600'>Htet</span> Lin</motion.h3>
+          className='font-[Faleko] font-bold text-[#000]/60 text-[300px] relative'>Win <span className='text-blue-600'>Htet</span> Lin</motion.h3>
 
           <div className='absolute z-5 h-[100%] top-25 flex justify-center items-center'>
             <motion.section 
@@ -210,7 +216,7 @@ const App = () => {
                 </p>
 
                 <div className='flex justify-start items-center w-full mt-7 pl-5'>
-                  <button className='w-40 h-10 bg-[#000] flex justify-center items-center text-[#fff] font-[Valley] text-[13px] cursor-pointer rounded-3xl hover:scale-[1.05] transition duration-200'>Let's Collaborate</button>
+                  <button className='w-40 h-10 bg-[#000] flex justify-center items-center text-[#fff] font-[Valley] text-[13px] cursor-pointer rounded-3xl hover:scale-[1.05] transition duration-400 ease-in-out'>Let's Collaborate</button>
                 </div>
               </div>
             </motion.section>
@@ -250,6 +256,10 @@ const App = () => {
         <AboutContaienr 
           ScrolltoSection= {ScrolltoSection}
           AboutRef= {AboutRef}
+        />
+        <ExperienceContainer 
+          ScrolltoSection= {ScrolltoSection}
+          ExperienceRef= {ExperienceRef}
         />
         <ContactContainer />
         <FooterContainer />

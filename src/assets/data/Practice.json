@@ -9,7 +9,8 @@
         "size" : "S",
         "cover" : "/projects/thecoffeeclub.png",
         "category" : "Realworld",
-        "tag" : "Web"
+        "tag" : "Web",
+        "status" : "90%"
     },
 
     {
@@ -22,7 +23,8 @@
         "size" : "M",
         "cover" : "/projects/CMS.png",
         "category" : "Realworld",
-        "tag" : "Web"
+        "tag" : "Web",
+        "status" : "40%"
     },
 
     {
@@ -35,6 +37,7 @@
         "size" : "S",
         "cover" : "/projects/Portfilio.png",
         "category" : "Realworld",
-        "tag" : "Web"
+        "tag" : "Web",
+        "status" : "100%"
     }
 ]
