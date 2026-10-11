@@ -1,0 +1,25 @@
+[
+    {
+        "course" : "Full-Stack Development",
+        "school" : "Self-Taught ( Online )",
+        "starttime" : 2025,
+        "endtime" : 2026,
+        "description" : "Self-driven study focusing on modern full-stack web architectures, bridging frontend UI components with scalable backend APIs, database management, and cloud deployment standard practices."
+    },
+
+    {
+        "course" : "Web Development Foundation",
+        "school" : "Data & Technology ( Online )",
+        "starttime" : 2025,
+        "endtime" : 2026,
+        "description" : "Data & Technology is an online learning academy providing structured technology and engineering courses tailored for modern tech roles. The institute emphasizes project-based learning and practical workflows, helping learners build strong software foundations in areas like modern web development, data management, and frontend engineering."
+    },
+
+    {
+        "course" : "Python Basic",
+        "school" : "Let's Learn Programming ( Online )",
+        "starttime" : 2024,
+        "endtime" : 2024,
+        "description" : "Let's Learn Programming (Myanmar) is a popular local online education community and academy focused on empowering aspiring Myanmar developers with core programming skills. Through hands-on, practical courses ranging from foundational programming concepts to advanced stack development, the platform equips students with real-world coding experience and industry-standard practices."
+    }
+]
