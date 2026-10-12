@@ -10,7 +10,8 @@
         "cover" : "/projects/thecoffeeclub.png",
         "category" : "Realworld",
         "tag" : "Web",
-        "status" : "90%"
+        "status" : "90%",
+        "features" : ""
     },
 
     {
@@ -19,12 +20,13 @@
         "type" : "Community Management",
         "project" : "Fullstack Project",
         "description": "CMS is a full-stack digital management system such as manage events, forms, seats, students and cards. In other features, with admin dashboard, auth system and role-base acess.",
-        "tech" : ["React", "TailwindCss", "Node.js", "Express", "Postgresql", "Mongo", "MiniO"],
+        "tech" : ["Next.js", "TailwindCss", "PostgreSQL", "Neon", "Uploadthing"],
         "size" : "M",
         "cover" : "/projects/CMS.png",
         "category" : "Realworld",
         "tag" : "Web",
-        "status" : "40%"
+        "status" : "40%",
+        "features" : ""
     },
 
     {
@@ -38,6 +40,7 @@
         "cover" : "/projects/Portfilio.png",
         "category" : "Realworld",
         "tag" : "Web",
-        "status" : "100%"
+        "status" : "100%",
+        "features" : ""
     }
 ]
