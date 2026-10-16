@@ -7,7 +7,7 @@ const TelegramLink = import.meta.env.VITE_TELEGRAM_URL;
 const WhatsAppLink = import.meta.env.VITE_WHATSAPP_URL;
 const LinkedinLink = import.meta.env.VITE_LINKEDIN_URL;
 
-const Contact = () => {
+const Contact = ({ ContactRef }) => {
 
      // Handle Contact Links
     const handleContact = (element) => {
@@ -25,7 +25,9 @@ const Contact = () => {
     }
 
     return (
-        <div className="h-[100%] items-center pb-20  flex justify-center pt-30">
+        <div 
+        ref={ContactRef}
+        className="h-[100%] items-center pb-20  flex justify-center pt-30">
             <motion.div 
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
