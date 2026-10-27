@@ -34,7 +34,7 @@
         "title" : "Portfilio",
         "type" : "Profile",
         "project" : "Frontend",
-        "description" : "Portfilio is a frontend website, created for communicate with perople who want to work with me. built with frontend tech.",
+        "description" : "Portfilio is a frontend website, created for communicate with people who want to work with me. built with frontend tech.",
         "tech" : ["React", "TailwindCss", "Framer-Motion"],
         "size" : "S",
         "cover" : "/projects/Portfilio.png",
