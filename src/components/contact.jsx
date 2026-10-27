@@ -27,24 +27,24 @@ const Contact = ({ ContactRef }) => {
     return (
         <div 
         ref={ContactRef}
-        className="h-[100%] items-center pb-20  flex justify-center pt-30">
+        className="flex items-center justify-center px-4 pb-16 pt-20 sm:px-6 sm:pb-20 sm:pt-28">
             <motion.div 
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.30, delay: 0.5}}
-            className="w-320">
+            className="w-full max-w-[80rem]">
                 <header className="flex flex-col justify-center items-center">
                     <h3 className="text-[13px] font-[Valley]">GET IN TOUCH</h3>
-                    <h1 className="font-[ka1] font-bold text-[30px]"><span className='text-orange-600'>Let</span><span className="text-blue-600"> Work</span> Together</h1>
+                    <h1 className="text-center font-[ka1] font-bold text-[24px] sm:text-[30px]"><span className='text-orange-600'>Let</span><span className="text-blue-600"> Work</span> Together</h1>
 
-                    <p className='font-[Inder] text-[15px] text-[#000]/60 mt-10'>Have a project idea in mind or just want to connect? Reach me here.</p>
+                    <p className='mt-6 text-center font-[Inder] text-[14px] text-[#000]/60 sm:mt-10 sm:text-[15px]'>Have a project idea in mind or just want to connect? Reach me here.</p>
                 </header>
 
-                <ul className='flex justify-center items-center gap-3 mt-2'>
+                <ul className='mt-3 flex flex-wrap items-center justify-center gap-1 sm:gap-3'>
                     {
                         ContactLinks.map((element, index) => {
                             return (
-                                <li key={index} onClick={() => handleContact(element)} className='flex justify-start pl-3 items-center gap-3 w-35 h-10 rounded-xl cursor-default hover:scale-[1.05] hover:text-blue-600 transition duration-200'>
+                                <li key={index} onClick={() => handleContact(element)} className='flex h-10 w-32 items-center justify-start gap-3 rounded-xl pl-3 cursor-pointer hover:scale-[1.05] hover:text-blue-600 transition duration-200 sm:w-35'>
                                 <img src={SocialIcon[element]} className='w-4'/>
                                 <span>{element}</span>
                                 </li>

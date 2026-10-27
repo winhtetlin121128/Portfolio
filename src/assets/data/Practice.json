@@ -20,7 +20,7 @@
         "type" : "Community Management",
         "project" : "Fullstack Project",
         "description": "CMS is a full-stack digital management system such as manage events, forms, seats, students and cards. In other features, with admin dashboard, auth system and role-base acess.",
-        "tech" : ["Next.js", "TailwindCss", "PostgreSQL", "Neon", "Uploadthing"],
+        "tech" : ["Next.js", "TailwindCss", "Prisma", "TypeScript", "PostgreSQL", "Neon", "Uploadthing"],
         "size" : "M",
         "cover" : "/projects/CMS.png",
         "category" : "Realworld",

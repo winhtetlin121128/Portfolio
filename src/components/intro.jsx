@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import { useRef } from 'react';
 import SocialIcon from '../techstack.js';
 import MiPhoto from '../assets/mi.png';
 
@@ -28,39 +27,39 @@ const Intro = ({ ScrollToSection, ContactRef, HomeRef }) => {
     }
 
     return (
-        <div ref={HomeRef} className="flex flex-col w-full items-center h-[100vh]">
-            <main className="w-full flex flex-col items-center h-[100%]">
-                <div className="flex justify-center w-320 h-[95vh] items-center border-b border-[#000]/20">
+        <div ref={HomeRef} className="flex w-full items-center justify-center px-4 sm:px-6">
+            <main className="w-full max-w-[80rem]">
+                <div className="relative flex min-h-[calc(100svh-5rem)] w-full flex-col items-center justify-center overflow-hidden border-b border-[#000]/20 py-10 sm:min-h-[calc(100svh-5rem)] lg:h-[95vh] lg:min-h-0 lg:py-0">
 
                     <motion.h3
                         initial={{ opacity: 0, y: -100 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.30, delay: 0.20 }}
-                        className="font-[Faleko] font-bold text-[#000]/60 text-[300px] relative"
+                        className="relative z-0 whitespace-nowrap text-center font-[Faleko] font-bold leading-none text-[#000]/60 text-[clamp(3.5rem,16vw,8rem)] lg:text-[300px]"
                     >
                         Win <span className="text-blue-600">Htet</span> Lin
                     </motion.h3>
 
-                    <div className="absolute z-5 h-[100%] top-25 flex justify-center items-center">
+                    <div className="relative z-10 flex w-full flex-col items-center justify-center gap-5 pt-6 sm:pt-8 lg:absolute lg:inset-x-0 lg:top-25 lg:h-full lg:flex-row lg:gap-0 lg:pt-0">
                         <motion.section
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.30, delay: 1 }}
-                            className="w-[20%] flex flex-col items-end pt-50"
+                            className="order-2 flex w-full max-w-xl flex-col items-center pt-0 text-center lg:order-1 lg:w-[20%] lg:items-end lg:pt-50 lg:text-left"
                         >
-                            <div className="flex flex-col justify-center items-start">
-                                <span className="font-[Valley] text-[11px] font-bold text-[#000]/80 border border-[#000]/20 pl-3 pr-3 pt-1 pb-1 rounded-3xl flex gap-1 shadow-lg">
+                            <div className="flex flex-col justify-center items-center">
+                                <span className="flex flex-wrap pt-0.5 pb-0.5 justify-center gap-1 rounded-3xl border border-[#000]/20 px-3 py- text-center font-[Valley] text-[10px] font-bold text-[#000]/80 shadow-lg sm:text-[11px] lg:text-[10px] lg:justify-start lg:text-left">
                                     FRONTEND-FOCUS <span>FULLSTACK ENGINEER</span>
                                 </span>
-                                <p className="font-[Recursive] text-[15px] leading-6 mt-3 ml-5 text-[#000]/60">
+                                <p className="mt-3 max-w-prose font-[Recursive] text-[13px] leading-6 text-[#000]/60 sm:text-[15px] lg:ml-5">
                                     I build landing-site, profile & management systems with <span className="text-blue-600">MERN</span> stack. I care
                                     about the product how can easy to use.
                                 </p>
 
-                                <div className="flex justify-start items-center w-full mt-7 pl-5">
+                                <div className="mt-5 flex w-full items-center justify-center sm:mt-7 lg:justify-start lg:pl-5">
                                     <button
                                         onClick={() => handleScroll()}
-                                        className="w-40 h-10 bg-[#000] flex justify-center items-center text-[#fff] font-[Valley] text-[13px] cursor-pointer rounded-3xl hover:scale-[1.05] transition duration-400 ease-in-out"
+                                        className="flex h-10 w-40 items-center justify-center rounded-3xl bg-[#000] font-[Valley] text-[13px] text-[#fff] transition duration-300 ease-in-out hover:scale-[1.05]"
                                     >
                                         Let's Collaborate
                                     </button>
@@ -72,23 +71,23 @@ const Intro = ({ ScrollToSection, ContactRef, HomeRef }) => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.30, delay: 0.30 }}
-                            className="grayscale hover:grayscale-0 w-100 h-[70vh] flex items-end"
+                            className="order-1 flex w-[min(65vw,18rem)] items-end grayscale transition sm:w-[min(58vw,22rem)] lg:order-2 lg:h-[70vh] lg:w-100"
                         >
-                            <img src={MiPhoto} className="grayscale w-full hover:grayscale-0 transition duration-200 select-none" />
+                            <img src={MiPhoto} alt="Win Htet Lin" className="w-full select-none grayscale transition duration-200 hover:grayscale-0" />
                         </motion.div>
 
                         <motion.section
                             initial={{ opacity: 0, x: 100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.30, delay: 1 }}
-                            className="w-[20%] list-none font-[Valley] flex flex-col items-end gap-3 pt-40"
+                            className="order-3 flex w-full flex-row flex-wrap justify-center gap-2 list-none font-[Valley] pt-0 sm:gap-3 lg:w-[20%] lg:flex-col lg:items-end lg:justify-start lg:gap-3 lg:pt-40"
                         >
                             {ContactLinks.map((element, index) => {
                                 return (
                                     <li
                                         key={index}
                                         onClick={() => handleContact(element)}
-                                        className="flex justify-start pl-3 items-center gap-3 w-35 h-10 bg-[#fff] rounded-3xl shadow-lg cursor-default hover:scale-[1.05] hover:shadow-white transition duration-200"
+                                        className="flex h-10 w-32 items-center justify-start gap-3 rounded-3xl bg-[#fff] pl-3 shadow-lg transition duration-200 hover:scale-[1.05] hover:shadow-white cursor-pointer sm:w-35 lg:w-35"
                                     >
                                         <img src={SocialIcon[element]} className="w-4" />
                                         <span>{element}</span>

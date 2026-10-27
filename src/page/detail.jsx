@@ -23,30 +23,30 @@ const ProjectDetail = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.50 }}
-            className="bg-[#eeeee5] h-[100%] flex justify-center pt-20">
-            <div className="w-320 p-5">
-                <header className="flex h-15 items-center gap-5">
+            className="bg-[#eeeee5] min-h-screen flex justify-center px-4 pt-16 sm:px-6 sm:pt-20">
+            <div className="w-full max-w-[80rem] py-5">
+                <header className="flex min-h-15 items-center gap-3 sm:gap-5">
                     <Link
                         to={"/"}
                         className="pl-4 pr-4 text-[13px] pt-1 pb-1 rounded-[10px] border border-[#000]/20 text-[#000]/60 font-[Recursive] cursor-pointer hover:bg-[#000] hover:text-[#fff] transition duration-200">
                         Back
                     </Link>
-                    <span className="font-[Recursive] text-[13px] text-[#000]/60">Projects &gt; {project.title}</span>
+                    <span className="font-[Recursive] text-[11px] sm:text-[13px] text-[#000]/60 break-words">Projects &gt; {project.title}</span>
                 </header>
 
-                <main className="w-full pt-10 flex justify-center gap-10">
-                    <section className="w-[50%]">
+                <main className="w-full pt-6 sm:pt-10 flex flex-col lg:flex-row items-stretch lg:items-start justify-center gap-8 lg:gap-10">
+                    <section className="w-full lg:w-1/2 min-w-0">
                         <span className="font-[Recursive] text-blue-600 text-[15px]">{project.tag?.toUpperCase() || "FULL-STACK"} PROJECT</span>
-                        <h3 className="text-[30px] font-[ka1]">{project.title}</h3>
+                        <h3 className="text-[24px] sm:text-[30px] font-[ka1] break-words">{project.title}</h3>
 
-                        <p className="font-[Valley] text-[15px] text-[#000]/60 mt-7 leading-7 mr-20">{project.description}</p>
+                        <p className="font-[Valley] text-[15px] text-[#000]/60 mt-5 sm:mt-7 leading-7 lg:mr-8 xl:mr-20">{project.description}</p>
 
-                        <ul className="flex justify-start items-center mt-5 gap-3">
-                            <li className="w-[50%] shadow-lg rounded-lg pl-20 h-20 flex flex-col justify-center items-start bg-[#fff]">
+                        <ul className="flex justify-start items-stretch mt-5 gap-3">
+                            <li className="w-1/2 shadow-lg rounded-lg px-4 sm:px-6 lg:px-5 xl:px-8 h-20 flex flex-col justify-center items-start bg-[#fff]">
                                 <span className="font-[Recursive] font-bold text-[17px]">{project.size}</span>
                                 <span className="font-[Valley] text-[12px] text-[#000]/60">TECHNOLOGIES</span>
                             </li>
-                            <li className="w-[50%] shadow-lg rounded-lg pl-20 h-20 flex flex-col justify-center items-start bg-[#fff]">
+                            <li className="w-1/2 shadow-lg rounded-lg px-4 sm:px-6 lg:px-5 xl:px-8 h-20 flex flex-col justify-center items-start bg-[#fff]">
                                 <span className="font-[Recursive] font-bold text-[17px]">{project.status}</span>
                                 <span className="font-[Valley] text-[12px] text-[#000]/60">STATUS</span>
                             </li>
@@ -56,7 +56,7 @@ const ProjectDetail = () => {
 
                         <div className="flex flex-col font-[Valley] mt-7">
                             <span className="text-[15px]">Technologies Used</span>
-                            <ul className="flex justify-start items-center tech-icon gap-2 mt-3 text-[13px]">
+                            <ul className="flex flex-wrap justify-start items-center tech-icon gap-2 mt-3 text-[13px]">
                                 {
                                     project.tech.map((element, index) => {
                                         return (
@@ -68,12 +68,12 @@ const ProjectDetail = () => {
                         </div>
                     </section>
 
-                    <section className="w-[50%] flex flex-col items-center gap-3">
-                        <div className='w-120 rounded-xl overflow-hidden'>
-                            <img src={project.cover} alt={project.title} />
+                    <section className="w-full lg:w-1/2 min-w-0 flex flex-col items-center gap-3">
+                        <div className='w-full max-w-120 rounded-xl overflow-hidden'>
+                            <img src={project.cover} alt={project.title} className="w-full h-auto object-cover" />
                         </div>
 
-                        <div className='bg-[#fff] h-100 w-120 rounded-xl shadow-lg border border-[#000]/20'>
+                        <div className='bg-[#fff] min-h-60 sm:min-h-80 w-full max-w-120 rounded-xl shadow-lg border border-[#000]/20'>
                             {/* Additional project info */}
                         </div>
                     </section>

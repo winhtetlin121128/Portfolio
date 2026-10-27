@@ -29,11 +29,11 @@ const { React, TailwindCss, Python, HTML5, CSS3, JavaScript, Nodejs, Express, Po
 
 const About = ({ AboutRef }) => {
     return (
-        <div ref={AboutRef} className="h-[100%] pt-20">
-            <div className="w-320 border-b border-[#000]/20 pb-20">
+        <div ref={AboutRef} className="px-4 pt-16 sm:px-6 sm:pt-20">
+            <div className="mx-auto w-full max-w-[80rem] border-b border-[#000]/20 pb-16 sm:pb-20">
                 <div>
                     <h3 className="font-[SilkScreen] text-[13px]">ABOUT ME</h3>
-                    <div className='font-[Recursive] text-[30px] font-bold'>
+                    <div className='mt-1 font-[Recursive] text-[20px] font-bold sm:text-[25px] lg:text-[30px]'>
                         <Typewriter 
                         options={{ 
                             strings: ["Frontend Focus : Full-stack Engineer", "IT Support Specialist", "UI/UX Designer", "Just A Student"], 
@@ -46,16 +46,16 @@ const About = ({ AboutRef }) => {
                         />
                     </div>
                 </div>
-                <div className="flex mt-20 pl-40 pr-40">
-                    <section className="flex flex-col w-[20%]">
-                        <div className="w-30 h-30 rounded-[50%] overflow-hidden">
-                            <img src={MiPhoto} className='h-30'/>
+                <div className="mt-10 flex flex-col gap-6 sm:mt-14 sm:flex-row sm:gap-8 lg:mt-20 lg:px-10 xl:px-20">
+                    <section className="flex w-full justify-center sm:w-[25%] sm:justify-start">
+                        <div className="h-24 w-24 rounded-full overflow-hidden sm:h-28 sm:w-28 lg:h-30 lg:w-30">
+                            <img src={MiPhoto} alt="Win Htet Lin" className='h-full w-full object-cover'/>
                         </div>
                     </section>
 
-                    <section className="flex flex-col w-[80%]">
+                    <section className="flex min-w-0 w-full flex-col sm:w-[75%]">
                         <h3 className="font-[Inder] font-bold text-[20px] text-[#000]/80">WIN HTET LIN</h3>
-                        <ul className="flex justify-start items-center mt-3 gap-5">
+                        <ul className="mt-3 flex flex-wrap items-center justify-start gap-x-5 gap-y-3 sm:gap-5">
                             {
                                 Items.map((element, index) => {
                                     return (
