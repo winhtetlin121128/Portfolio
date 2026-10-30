@@ -41,7 +41,7 @@ const Navbar = ({ ScrollToSection, HomeRef, ProjectRef, AboutRef, ExperienceRef 
           {Logo}
         </h3>
 
-        <ul className="bg-[#fff]/60 flex min-w-0 gap-0.5 overflow-x-auto rounded-3xl h-11  border border-[#000]/20 px-1.5 py-2 sm:flex sm:gap-1 sm:px-2">
+        <ul className="hidden bg-[#fff]/60 flex min-w-0 gap-0.5 overflow-x-auto rounded-3xl h-11  border border-[#000]/20 px-1.5 py-2 sm:flex sm:gap-1 sm:px-2">
           {menuTags.map((tag) => (
             <li
               onClick={() => handleScroll(tag)}
