@@ -14,7 +14,7 @@ const Navbar = ({ ScrollToSection, HomeRef, ProjectRef, AboutRef, ExperienceRef 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
 
-    setScrolled(latest > previous)
+    setScrolled(latest)
 
     if (latest < 80) {
       setHidden(false);
