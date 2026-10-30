@@ -9,7 +9,7 @@ const ProjectDetail = () => {
 
     if (!project) {
         return (
-            <div className="bg-[#eeeee5] h-[100vh] flex justify-center items-center">
+            <div className="bg-[#fff] h-[100vh] flex justify-center items-center">
                 <div className="text-center">
                     <h3 className="font-[ka1] text-[30px]">Project Not Found</h3>
                     <Link to="/" className="text-blue-600 font-[Valley] text-[15px] mt-3 inline-block">Go Back</Link>
@@ -23,7 +23,7 @@ const ProjectDetail = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.50 }}
-            className="bg-[#eeeee5] min-h-screen flex justify-center px-4 pt-16 sm:px-6 sm:pt-20">
+            className="bg-[#fff] min-h-screen flex justify-center px-4 pt-16 sm:px-6 sm:pt-20">
             <div className="w-full max-w-[80rem] py-5">
                 <header className="flex min-h-15 items-center gap-3 sm:gap-5">
                     <Link

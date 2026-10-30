@@ -11,7 +11,8 @@
         "category" : "Realworld",
         "tag" : "Web",
         "status" : "90%",
-        "features" : ""
+        "features" : "",
+        "link" : ""
     },
 
     {
@@ -20,7 +21,7 @@
         "type" : "Community Management",
         "project" : "Fullstack Project",
         "description": "CMS is a full-stack digital management system such as manage events, forms, seats, students and cards. In other features, with admin dashboard, auth system and role-base acess.",
-        "tech" : ["Next.js", "TailwindCss", "Prisma", "TypeScript", "PostgreSQL", "Neon", "Uploadthing"],
+        "tech" : ["Next.js", "TailwindCss", "Framer-Motion", "Postgresql", "Prisma", "Neon", "Uploadthing"],
         "size" : "M",
         "cover" : "/projects/CMS.png",
         "category" : "Realworld",
@@ -38,6 +39,22 @@
         "tech" : ["React", "TailwindCss", "Framer-Motion"],
         "size" : "S",
         "cover" : "/projects/Portfilio.png",
+        "category" : "Realworld",
+        "tag" : "Web",
+        "status" : "100%",
+        "features" : "",
+        "link" : "https://github.com/winhtetlin121128/Portfolio"
+    },
+
+    {
+        "id" : 4,
+        "title" : "UI Playground",
+        "type" : "Website",
+        "project" : "Frontend",
+        "description" : "UI Playground is a frontend website, created for inspring design, styling radius, shadow and color. Build with frontend tech",
+        "tech" : ["React", "TailwindCss"],
+        "size" : "S",
+        "cover" : "/projects/UIPlayground.png",
         "category" : "Realworld",
         "tag" : "Web",
         "status" : "100%",
