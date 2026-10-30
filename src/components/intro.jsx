@@ -49,7 +49,7 @@ const Intro = ({ ScrollToSection, ContactRef, HomeRef }) => {
                         >
                             <div className="flex w-full flex-col justify-center sm:items-center lg:items-start">
                                 <div className='w-full flex lg:justify-start justify-center'>
-                                    <span className="flex items-center pt-0.5 pb-0.5 justify-center gap-1 rounded-3xl border border-[#000]/20 px-3 py- text-center font-[Valley] text-[10px]  text-[#000]/80 shadow-lg sm:text-[11px] lg:text-[13px] lg:justify-start lg:text-left">
+                                    <span className="flex text-[#000]/60 items-center pt-0.5 pb-0.5 justify-center gap-1 rounded-3xl border border-[#000]/20 px-3 py- text-center font-[Valley] text-[10px] shadow-lg sm:text-[11px] lg:text-[13px] lg:justify-start lg:text-left">
                                     <span className='lg:text-[12px] floating-text opacity-[0.8]'>🔵</span>Open to full-stack roles
                                 </span>
                                 </div>
@@ -61,7 +61,7 @@ const Intro = ({ ScrollToSection, ContactRef, HomeRef }) => {
                                 <div className="mt-5 flex w-full items-center justify-center sm:mt-7 lg:justify-start lg:pl-5">
                                     <button
                                         onClick={() => handleScroll()}
-                                        className="flex h-10 w-40 items-center justify-center rounded-3xl bg-[#000] font-[Valley] text-[13px] text-[#fff] transition duration-300 ease-in-out hover:scale-[1.05]"
+                                        className="flex h-10 w-40 items-center justify-center rounded-3xl bg-[#000] font-[Valley] text-[13px] text-[#fff] transition duration-300 ease-in-out hover:scale-[1.05] cursor-pointer"
                                     >
                                         Let's Collaborate
                                     </button>
