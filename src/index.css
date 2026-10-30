@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 @font-face {
   font-family: "Recursive";
   src: url("./assets/font/Recursive.ttf");
@@ -54,6 +59,19 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+@keyframes floatingText {
+  0%,100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.floating-text {
+  animation: floatingText 2s infinite;
 }
 
 .dropdown-menu {

@@ -35,7 +35,7 @@ const Intro = ({ ScrollToSection, ContactRef, HomeRef }) => {
                         initial={{ opacity: 0, y: -100 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.30, delay: 0.20 }}
-                        className="relative z-0 whitespace-nowrap text-center font-[Faleko] font-bold leading-none text-[#000]/60 text-[clamp(3.5rem,16vw,8rem)] lg:text-[300px]"
+                        className="absolute z-0 top-50 lg:mt-0 whitespace-nowrap text-center font-[Faleko] font-bold leading-none text-[#000]/60 text-[90px] lg:text-[300px]"
                     >
                         Win <span className="text-blue-600">Htet</span> Lin
                     </motion.h3>
@@ -45,13 +45,15 @@ const Intro = ({ ScrollToSection, ContactRef, HomeRef }) => {
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.30, delay: 1 }}
-                            className="order-2 flex w-full max-w-xl flex-col items-center pt-0 text-center lg:order-1 lg:w-[20%] lg:items-end lg:pt-50 lg:text-left"
+                            className="order-2 flex w-full max-w-xl flex-col items-center pt-0 text-center lg:order-1 lg:w-[20%] lg:items-end lg:pt-50 lg:text-left pb-10"
                         >
-                            <div className="flex flex-col justify-center items-center">
-                                <span className="flex flex-wrap pt-0.5 pb-0.5 justify-center gap-1 rounded-3xl border border-[#000]/20 px-3 py- text-center font-[Valley] text-[10px] font-bold text-[#000]/80 shadow-lg sm:text-[11px] lg:text-[10px] lg:justify-start lg:text-left">
-                                    FRONTEND-FOCUS <span>FULLSTACK ENGINEER</span>
+                            <div className="flex w-full flex-col justify-center sm:items-center lg:items-start">
+                                <div className='w-full flex lg:justify-start justify-center'>
+                                    <span className="flex items-center pt-0.5 pb-0.5 justify-center gap-1 rounded-3xl border border-[#000]/20 px-3 py- text-center font-[Valley] text-[10px]  text-[#000]/80 shadow-lg sm:text-[11px] lg:text-[13px] lg:justify-start lg:text-left">
+                                    <span className='lg:text-[12px] floating-text opacity-[0.8]'>🔵</span>Open to full-stack roles
                                 </span>
-                                <p className="mt-3 max-w-prose font-[Recursive] text-[13px] leading-6 text-[#000]/60 sm:text-[15px] lg:ml-5">
+                                </div>
+                                <p className="mt-3 max-w-prose font-[Recursive] text-[13px] leading-6 text-[#000]/60 sm:text-[15px]">
                                     I build landing-site, profile & management systems with <span className="text-blue-600">MERN</span> stack. I care
                                     about the product how can easy to use.
                                 </p>
