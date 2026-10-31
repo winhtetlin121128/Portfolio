@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import Modal from './modal.jsx';
+import Menu from '../assets/icon/menu.png';
 
 const Logo = "<WHL/>";
 const menuTags = ["Home", "Projects", "About", "Experience", "Blog"];
@@ -9,6 +10,7 @@ const Navbar = ({ ScrollToSection, HomeRef, ProjectRef, AboutRef, ExperienceRef 
   const [hidden, setHidden] = useState(false);
   const [clicked, setClicked] = useState("Home");
   const [scrolled, setScrolled] = useState("");
+  const [active, setActived] = useState(false);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -30,7 +32,18 @@ const Navbar = ({ ScrollToSection, HomeRef, ProjectRef, AboutRef, ExperienceRef 
     tag === "Experience" && ScrollToSection(ExperienceRef);
 
     setClicked(tag)
+    setActived(false)
   };
+
+  const handleMenuOpen = () => {
+    if(active === true) {
+      setActived(false)
+    }
+
+    if(active === false) {
+      setActived(true)
+    }
+  }
 
   return (
     <motion.nav
@@ -54,7 +67,23 @@ const Navbar = ({ ScrollToSection, HomeRef, ProjectRef, AboutRef, ExperienceRef 
         </ul>
 
         <span className="hidden shrink-0 text-[13px] sm:block">GMT 6:30</span>
+        <div onClick={() => handleMenuOpen()} style={{backgroundImage: `url(${Menu})`}} className={`w-5 h-5 bg-cover bg-center rounded-md overflow-hidden  md:hidden lg:hidden`}></div>
       </div>
+
+      {
+        active === true ? 
+          <div className="w-full absolute h-50 top-17 flex flex-col justify-center items-center bg-[#fff] backdrop-blur-lg border-[#000]/20 p-3">
+            {menuTags.map((tag) => (
+              <li
+                onClick={() => handleScroll(tag)}
+                key={tag}
+                className={`list-none shrink-0 cursor-pointer w-full flex justify-center h-10 items-center text-[11px] text-[#000]/60 transition duration-200 hover:bg-gray-400 hover:text-[#fff] sm:px-3 sm:text-[13px] rounded-xl`}
+              >
+                {tag}
+              </li>
+            ))}
+          </div> : ""
+      }
     </motion.nav>
   );
 };
